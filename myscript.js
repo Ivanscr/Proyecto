@@ -56,3 +56,21 @@ let conversorHtml = () => {
     resultado = String(cadena).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/á/g, '&aacute;').replace(/é/g, '&eacute;').replace(/í/g, '&iacute;').replace(/ó/g, '&oacute;').replace(/ú/g, '&uacute;').replace(/“/g,'&quot;').replace(/”/g,'&quot;');
     document.getElementById("conversion").innerText = "Conversion: "+ resultado;
 }
+
+let limpiar = () => {
+    document.getElementById("mt").value = "";  
+    document.getElementById("fm").value = "";  
+    document.getElementById("fa").value = "";  
+    document.getElementById("fe").value = "";  
+    document.getElementById("n1").value = "";  
+    document.getElementById("n2").value = "";  
+    document.getElementById("N1").value = "";  
+    document.getElementById("N2").value = "";  
+    document.getElementById("n1c").value = "";  
+    document.getElementById("n2c").value = "";  
+    document.getElementById("cadena").value= "";
+    document.getElementById("resultado").innerHTML = "Resultado: ";  
+    document.getElementById("esfuerzo").innerHTML = "Esfuerzo: ";  
+    document.getElementById("mcm").innerHTML = "MCM: ";  
+    document.getElementById("conversion").innerText = "Conversion: ";
+}
