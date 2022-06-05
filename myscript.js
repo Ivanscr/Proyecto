@@ -30,3 +30,21 @@ let halstead = () => {
     B = V / 3000;
     document.getElementById("esfuerzo").innerHTML = "Esfuerzo: "+ E;  
 };
+
+let minimoC = () => {
+    var n1, n2, N1, N2, mcm;
+    let temporal;
+    n1 = document.getElementById("n1c").value;  
+    n2 = document.getElementById("n2c").value;  
+    N1 = n1;
+    N2 = n2;
+    if((n1 !== "") && (n2!=="")){
+        while (N2 !== 0) {
+            temporal = N2;
+            N2 = N1 % N2;
+            N1 = temporal;
+        }
+        mcm = (n1 * n2) / N1;
+        document.getElementById("mcm").innerHTML = "MCM: "+ mcm;  
+    }
+};
