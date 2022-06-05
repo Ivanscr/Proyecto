@@ -48,3 +48,11 @@ let minimoC = () => {
         document.getElementById("mcm").innerHTML = "MCM: "+ mcm;  
     }
 };
+
+
+let conversorHtml = () => {
+    var cadena, resultado;
+    cadena = document.getElementById("cadena").value;
+    resultado = String(cadena).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/á/g, '&aacute;').replace(/é/g, '&eacute;').replace(/í/g, '&iacute;').replace(/ó/g, '&oacute;').replace(/ú/g, '&uacute;').replace(/“/g,'&quot;').replace(/”/g,'&quot;');
+    document.getElementById("conversion").innerText = "Conversion: "+ resultado;
+}
