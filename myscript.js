@@ -7,3 +7,26 @@ let madurez  = () => {
     result = ((fa + fm + fe) - mt) / mt;
     document.getElementById("resultado").innerHTML = "Resultado: "+ result;  
 };
+
+let halstead = () => {
+    var  n1, n2, N1, N2, n, N, Nn, V, D, E, T, B;
+    n1= document.getElementById("n1").value;  
+    n2 = document.getElementById("n2").value;  
+    N1 = document.getElementById("N1").value;  
+    N2 = document.getElementById("N2").value;  
+    n = Number(n1) + Number(n2);
+    console.log('n:'+n)
+    N = Number(N1) + Number(N2);
+    console.log('N:'+N)
+    Nn = (n1 * Math.log2(n1)) + (n2 * Math.log2(n2));
+    console.log('Nn:'+Nn)
+    V = Nn * Math.log2(n);
+    console.log('V:'+V)
+    D = (n1 / 2) * (N2 / n2)
+    console.log('D:'+D)
+    E = D * V;
+    console.log('E:'+E)
+    T = E / 18;
+    B = V / 3000;
+    document.getElementById("esfuerzo").innerHTML = "Esfuerzo: "+ E;  
+};
