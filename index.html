@@ -5,22 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
-
-    <title>Proyecto IS</title>
+    <title>Proyecto</title>
 </head>
-g
 <body>
-    <div>   
-        <h1 class="titulo">Desarrollo de Control de versiones con Git</h1>
+    <div>
+        <h1 class="titulo">Desarrollo con control de versiones</h1>
 
         <div class="contenedor">
             <div class="tarjeta">
-                <div class="contenido">
-                    <h1 class="Titulo">Metrica de Madurez del Software:</h1>
+                <div class="contenido">  
+                    <h1 class="titulo">Métrica de madurez del software:</h1>
                     <label>Ingrese la cantidad del numero de modulos</label><br><br>
                     <input id="mt" type="number">
                     <br><br>
-                    <label>Ingrese la cantidad de los modulos moficiados </label><br><br>
+                    <label>Ingrese la cantidad de los modulos modificados</label><br><br>
                     <input id="fm" type="number">
                     <br><br>
                     <label>Ingrese la cantidad de modulos añadidos</label><br><br>
@@ -36,8 +34,7 @@ g
                     <h2 id="resultado">Resultado: </h2>
                 </div>
             </div>
-    
-
+            
             <div class="tarjeta">
                 <div class="contenido">
                     <h1 class="titulo">Esfuerzo de Halstead:</h1>
@@ -57,12 +54,10 @@ g
                         <button class="button" onclick="halstead()">Calcular</button>
                         <button class="button" onclick="limpiar()" type="button">Limpiar</button>
                     </div>
+                    <h2 id="esfuerzo">Esfuerzo: </h2>
                 </div>
-                <h2 id="esfuerzo">Esfuerzo: </h2>
             </div>
         
-        
-
             <div class="tarjeta">
                 <div class="contenido">
                     <h1 class="titulo">Mínimo común múltiplo:</h1>
@@ -76,12 +71,11 @@ g
                         <button class="button" onclick="minimoC()">Calcular</button>
                         <button class="button" onclick="limpiar()" type="button">Limpiar</button>
                     </div>
+                    <h2 id="mcm">MCM: </h2>
                 </div>
-                <h2 id="mcm">MCM: </h2>
             </div>
-        
-
-            <div class="tarjeta">
+            
+            <div class="tarjeta">
                 <div class="contenido">
                     <h1 class="titulo">Conversión HTML</h1>
                     <label>Ingrese la cadena a convertir</label><br><br>
@@ -91,10 +85,10 @@ g
                         <button class="button" onclick="conversorHtml()">Convertir</button>
                         <button class="button" onclick="limpiar()" type="button">Limpiar</button>
                     </div>
+                    <h2 id="conversion">Conversion: </h2>
                 </div>
-                <h2 id="conversion">Conversion: </h2>
             </div>
-
+        
             <div class="tarjeta">
                 <h1 class="titulo">Buscar y Eliminar</h1>
             </div>
