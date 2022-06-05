@@ -14,3 +14,12 @@ div.tarjeta {
     background-color: #6bb8da;
 }
 
+.contenido {
+    border-radius: 30px;
+    margin: 10px;
+    padding-left: 30px;
+    background-color: rgb(243, 241, 241);
+    width: 92.5%;
+    height: 92.5%;
+}
+
