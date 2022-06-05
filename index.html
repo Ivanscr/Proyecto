@@ -5,21 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
-
-    <title>Proyecto IS</title>
+    <title>Proyecto</title>
 </head>
 <body>
-    <div>   
-        <h1 class="titulo">Desarrollo de Control de versiones con Git</h1>
+    <div>
+        <h1 class="titulo">Desarrollo con control de versiones</h1>
 
         <div class="contenedor">
             <div class="tarjeta">
-                <div class="contenido">
-                    <h1 class="Titulo">Metrica de Madurez del Software:</h1>
+                <div class="contenido">  
+                    <h1 class="titulo">Métrica de madurez del software:</h1>
                     <label>Ingrese la cantidad del numero de modulos</label><br><br>
                     <input id="mt" type="number">
                     <br><br>
-                    <label>Ingrese la cantidad de los modulos moficiados </label><br><br>
+                    <label>Ingrese la cantidad de los modulos modificados</label><br><br>
                     <input id="fm" type="number">
                     <br><br>
                     <label>Ingrese la cantidad de modulos añadidos</label><br><br>
@@ -35,8 +34,7 @@
                     <h2 id="resultado">Resultado: </h2>
                 </div>
             </div>
-    
-
+            
             <div class="tarjeta">
                 <div class="contenido">
                     <h1 class="titulo">Esfuerzo de Halstead:</h1>
@@ -45,21 +43,21 @@
                     <br><br>
                     <label>Ingrese la cantidad de operandos distintos (n2)</label><br><br>
                     <input id="n2" type="number">
-                <br><br>
-                <label>Ingrese la cantidad de veces que aparece el operador (N1)</label><br><br>
-                <input id="N1" type="number">
-                <br><br>
-                <label>Ingrese la cantidad de veces que aparece el operando (N2)</label><br><br>
-                <input id="N2" type="number">
-                <br>
-                <div class="titulo">
-                    <button class="button" onclick="halstead()">Calcular</button>
-                    <button class="button" onclick="limpiar()" type="button">Limpiar</button>
+                    <br><br>
+                    <label>Ingrese la cantidad de veces que aparece el operador (N1)</label><br><br>
+                    <input id="N1" type="number">
+                    <br><br>
+                    <label>Ingrese la cantidad de veces que aparece el operando (N2)</label><br><br>
+                    <input id="N2" type="number">
+                    <br>
+                    <div class="titulo">
+                        <button class="button" onclick="halstead()">Calcular</button>
+                        <button class="button" onclick="limpiar()" type="button">Limpiar</button>
+                    </div>
+                    <h2 id="esfuerzo">Esfuerzo: </h2>
                 </div>
-                <h2 id="esfuerzo">Esfuerzo: </h2>
             </div>
         
-
             <div class="tarjeta">
                 <div class="contenido">
                     <h1 class="titulo">Mínimo común múltiplo:</h1>
@@ -72,11 +70,11 @@
                     <div class="titulo">
                         <button class="button" onclick="minimoC()">Calcular</button>
                         <button class="button" onclick="limpiar()" type="button">Limpiar</button>
+                    </div>
+                    <h2 id="mcm">MCM: </h2>
                 </div>
-                <h2 id="mcm">MCM: </h2>
             </div>
-        
-
+            
             <div class="tarjeta">
                 <div class="contenido">
                     <h1 class="titulo">Conversión HTML</h1>
@@ -86,14 +84,41 @@
                     <div class="titulo">
                         <button class="button" onclick="conversorHtml()">Convertir</button>
                         <button class="button" onclick="limpiar()" type="button">Limpiar</button>
+                    </div>
+                    <h2 id="conversion">Conversion: </h2>
                 </div>
-                <h2 id="conversion">Conversion: </h2>
             </div>
         
+            <div class="tarjeta1">
+                <div class="contenido">
+                    <h1 class="titulo">Buscar y Eliminar</h1>
+                    <h3 class="titulo">Ingrese los datos de las personas</h3>
+                    <label>Ingrese el nombre</label><br><br>
+                    <input id="nombre" type="text">
+                    <br><br>
+                    <label>Ingrese la edad</label><br><br>
+                    <input id="edad" type="number">
+                    <br>
+                    <h2 id="listaP">Personas: </h2>
 
-            <div class="tarjeta">
-                <h1 class="titulo">Buscar y Eliminar</h1>
+                    <div class="titulo">
+                        <button class="button" onclick="agregarPersona()">Agregar persona</button>
+                    </div>
+                    <h3 class="titulo">Ingrese los numeros para buscar mulitiplos dentro de la lista</h3>
+                    <label>Ingrese el numero</label><br><br>
+                    <input id="multiplos" type="text">
+                    <br>
+                    <h2 id="listaN">Numeros: </h2>
+                    <div class="titulo">
+                        <button class="button" onclick="agregarNumero()">Agregar numero</button>
+                    </div>
+                    <div class="titulo">
+                        <button class="button" onclick="mostrarPersonas()">Buscar</button>
+                    </div>
+                    <h2 id="encontrados">Encontrados: </h2>
+                </div>
             </div>
+        
         </div>
     </div>
 </body>

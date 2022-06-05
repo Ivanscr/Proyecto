@@ -1,10 +1,16 @@
+var personas = []
+var numeros = []
+var edades = []
+var multiplos = []
+
+
 let madurez  = () => {
     var mt,fm,fa,fe, result;  
     mt = document.getElementById("mt").value;  
     fm = document.getElementById("fm").value;  
     fa = document.getElementById("fa").value;  
     fe = document.getElementById("fe").value;  
-    result = ((fa + fm + fe) - mt) / mt;
+    result = ((Number(fa) + Number(fm) + Number(fe)) - Number(mt)) / Number(mt);
     document.getElementById("resultado").innerHTML = "Resultado: "+ result;  
 };
 
@@ -56,6 +62,61 @@ let conversorHtml = () => {
     resultado = String(cadena).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/á/g, '&aacute;').replace(/é/g, '&eacute;').replace(/í/g, '&iacute;').replace(/ó/g, '&oacute;').replace(/ú/g, '&uacute;').replace(/“/g,'&quot;').replace(/”/g,'&quot;');
     document.getElementById("conversion").innerText = "Conversion: "+ resultado;
 }
+
+let agregarPersona = () =>{
+    var persona
+    nombre = document.getElementById("nombre");  
+    edad = document.getElementById("edad");
+    persona = nombre.value + "-" + edad.value
+    personas.push(persona);
+    document.getElementById("listaP").innerHTML = "Lista: " +personas;
+    nombre.value = ""
+    edad.value = ""
+}
+
+let agregarNumero = () => {
+    numero = document.getElementById("multiplos");  
+    numeros.push(numero.value);
+    document.getElementById("listaN").innerHTML = "Numeros: " +numeros;
+    numero.value = ""
+}
+
+function obtenerEdad(persona) { 
+    return persona.split('-')[1];
+}
+
+function obtenerNombre(persona) { 
+    return persona.split('-')[0];
+}
+
+
+
+let mostrarPersonas = () => {
+    var encontrados = []
+    var suma;
+    personas.forEach(function(personas) {
+        edades.push(obtenerEdad(personas))
+    });
+    var m = Math.max(...edades);
+    for(i = 0; i<numeros.length; i++){
+        suma = 0
+        while(suma <= m){
+            suma = suma + Number(numeros[i]);
+            multiplos.push(suma);
+        }
+    }
+
+    for(i = 0; i<edades.length; i++){
+        for(j = 0; j<multiplos.length; j++){
+            if(edades[i] == multiplos[j]){
+                encontrados.push(obtenerNombre(personas[i]));
+            }
+        }
+    }
+    document.getElementById("encontrados").innerHTML = "Encontrados: " + encontrados;
+}
+
+
 
 let limpiar = () => {
     document.getElementById("mt").value = "";  
