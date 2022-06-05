@@ -4,9 +4,9 @@ let madurez  = () => {
     fm = document.getElementById("fm").value;  
     fa = document.getElementById("fa").value;  
     fe = document.getElementById("fe").value;  
-    calculo1=(fa+fe+fm);
-    calculo2=mt-calculo1;
-    result = calculo1;
+    calculo1=parseFloat(fa)+parseFloat(fe)+parseFloat(fm);
+    calculo2=parseFloat(mt)-parseFloat(calculo1)
+    result = parseFloat(calculo2)/parseFloat(mt);
     document.getElementById("resultado").innerHTML = "Resultado: "+ result;  
 };
 
