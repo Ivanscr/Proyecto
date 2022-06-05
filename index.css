@@ -33,3 +33,18 @@ input{
     border-radius: 5px;
     padding-bottom: 5px;
 }
+
+div.tarjeta:hover {
+    border: 1px solid #777;
+}
+
+.button{
+    padding:10px 30px; 
+    border:solid 6px #004F72; 
+    border-radius: 41px; 
+    font:23px Arial, Helvetica, sans-serif; 
+    font-weight:bold; 
+    color:#E5FFFF; 
+    background-color:#3BA4C7; 
+    box-shadow:0px 0px 20px #bababa, inset 0px 0px 1px #ffffff;    
+}
